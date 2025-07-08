@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Terima Kasih 💖</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You 💖</title>
   <style>
     body {
       margin: 0;
@@ -15,18 +16,18 @@
       align-items: center;
       font-family: 'Georgia', serif;
       color: #a8325e;
-      transition: opacity 0.8s ease;
+      text-align: center;
+      position: relative;
     }
 
-    .container {
-      text-align: center;
+    .box {
       background: #fff0f4;
       padding: 30px;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      max-width: 500px;
+      max-width: 90%;
       z-index: 2;
-      position: relative;
+      animation: fadeIn 1s ease;
     }
 
     h1 {
@@ -35,8 +36,13 @@
     }
 
     p {
-      font-size: 1.1em;
+      font-size: 1.05em;
       line-height: 1.6;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .emoji {
@@ -48,24 +54,23 @@
     }
 
     @keyframes jatuh {
-      0% { transform: translateY(0); opacity: 0.9; }
+      0% { transform: translateY(0); opacity: 1; }
       100% { transform: translateY(110vh); opacity: 0; }
     }
   </style>
 </head>
 <body>
-
-  <div class="container">
-    <h1>💌 Terima kasih telah membaca!</h1>
+  <div class="box">
+    <h1>Thank you for reading 💖</h1>
     <p>
-      Semoga kamu merasakan hangatnya perhatian dan cinta  
-      dari surat-surat kecil ini.  
-      Kamu pantas mendapatkan hal-hal baik.  
-      Jangan lupa bahagia, ya 🌷✨
+      Semoga hari-harimu selalu cerah dan penuh cinta.  
+      Jangan lupa senyum, jangan lupa bahagia, karena kamu pantas untuk itu.
+      jika harimu buruk selalu ingat ada seseorang disekelilingmu yang peduli denganmu, termasuk diriku!!! 😅😅 
+      Dari seseorang yang diam-diam peduli... 🌸  
     </p>
   </div>
 
-  <!-- Emoji jatuh -->
+  <!-- Emoji Jatuh -->
   <div class="emoji" style="left: 5%;">💐</div>
   <div class="emoji" style="left: 15%; animation-delay: 1s;">🌷</div>
   <div class="emoji" style="left: 25%; animation-delay: 2s;">🦋</div>
@@ -76,6 +81,5 @@
   <div class="emoji" style="left: 75%; animation-delay: 1.8s;">🐣</div>
   <div class="emoji" style="left: 85%; animation-delay: 2.2s;">🍄</div>
   <div class="emoji" style="left: 95%; animation-delay: 0.8s;">✨</div>
-
 </body>
 </html>
