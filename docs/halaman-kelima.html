@@ -2,40 +2,36 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Untuk Kamu</title>
+  <title>Terima Kasih 💖</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      height: 100vh;
       background: linear-gradient(to bottom right, #fde2e4, #f9c5d1);
+      height: 100vh;
+      overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
-      text-align: center;
       font-family: 'Georgia', serif;
       color: #a8325e;
-      position: relative;
-      animation: fadeIn 1s ease forwards;
-      opacity: 1;
       transition: opacity 0.8s ease;
     }
 
-    body.fade-out {
-      opacity: 0;
-    }
-
-    .box {
+    .container {
+      text-align: center;
       background: #fff0f4;
-      padding: 40px;
+      padding: 30px;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
       max-width: 500px;
+      z-index: 2;
+      position: relative;
     }
 
     h1 {
-      font-size: 2em;
-      margin-bottom: 20px;
+      font-size: 1.8em;
+      margin-bottom: 10px;
     }
 
     p {
@@ -43,38 +39,43 @@
       line-height: 1.6;
     }
 
-    .emoji-kiri-atas {
+    .emoji {
       position: absolute;
-      top: 10px;
-      left: 10px;
-      font-size: 2em;
+      top: -50px;
+      font-size: 1.5em;
+      animation: jatuh 6s linear infinite;
+      opacity: 0.8;
     }
 
-    .emoji-kanan-bawah {
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-      font-size: 2em;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    @keyframes jatuh {
+      0% { transform: translateY(0); opacity: 0.9; }
+      100% { transform: translateY(110vh); opacity: 0; }
     }
   </style>
 </head>
 <body>
-  <div class="emoji-kiri-atas">💐✨🌷☘️🌱</div>
-  <div class="box">
-    <h1>Untuk Kamu 💌</h1>
+
+  <div class="container">
+    <h1>💌 Terima kasih telah membaca!</h1>
     <p>
-      Hai kamu yang manis,<br><br>
-      Terima kasih sudah membuka surat ini.<br>
-      Semoga harimu sehangat senyummu dan seindah hatimu.<br><br>
-      Jangan lupa jaga diri, tetap semangat, dan jangan menyerah ya!<br><br>
-      Dari seseorang yang diam-diam peduli... 🌸
+      Semoga kamu merasakan hangatnya perhatian dan cinta  
+      dari surat-surat kecil ini.  
+      Kamu pantas mendapatkan hal-hal baik.  
+      Jangan lupa bahagia, ya 🌷✨
     </p>
   </div>
-  <div class="emoji-kanan-bawah">🌺🍄🐣🐬🦋🍡🍰</div>
+
+  <!-- Emoji jatuh -->
+  <div class="emoji" style="left: 5%;">💐</div>
+  <div class="emoji" style="left: 15%; animation-delay: 1s;">🌷</div>
+  <div class="emoji" style="left: 25%; animation-delay: 2s;">🦋</div>
+  <div class="emoji" style="left: 35%; animation-delay: 1.5s;">🍰</div>
+  <div class="emoji" style="left: 45%; animation-delay: 0.5s;">🍡</div>
+  <div class="emoji" style="left: 55%; animation-delay: 2.5s;">🐬</div>
+  <div class="emoji" style="left: 65%; animation-delay: 1.2s;">☘️</div>
+  <div class="emoji" style="left: 75%; animation-delay: 1.8s;">🐣</div>
+  <div class="emoji" style="left: 85%; animation-delay: 2.2s;">🍄</div>
+  <div class="emoji" style="left: 95%; animation-delay: 0.8s;">✨</div>
+
 </body>
 </html>
