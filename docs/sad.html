@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>For You</title>
+  <title>It's Okay to Be Sad</title>
   <style>
     body {
       margin: 0;
@@ -18,19 +18,15 @@
       transition: opacity 0.8s ease;
     }
 
-    body.fade-out {
-      opacity: 0;
-    }
-
     .container {
       text-align: center;
       background: #fff0f4;
-      padding: 25px 30px;
+      padding: 30px;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      max-width: 500px;
       z-index: 2;
       position: relative;
-      max-width: 500px;
     }
 
     h1 {
@@ -50,7 +46,7 @@
       border: none;
       border-radius: 20px;
       background-color: #ffd6d6;
-      color: #a8325e;
+      color: #d6336c;
       cursor: pointer;
       transition: transform 0.3s ease;
       box-shadow: 0 5px 10px rgba(0,0,0,0.1);
@@ -77,18 +73,16 @@
 <body>
 
   <div class="container">
-    <h1>Untuk Kamu 💌</h1>
+    <h1>😢 Why are you sad?</h1>
     <p>
-      Hai kamu yang manis,<br><br>
-      Terima kasih sudah membuka surat ini.  
-      Semoga harimu sehangat senyummu dan seindah hatimu.  
-      Jangan lupa jaga diri, tetap semangat, dan jangan menyerah ya!<br><br>
-      Dari seseorang yang diam-diam peduli... 🌸
+      Is something wrong? Don’t worry, you are not alone.  
+      Your smile means so much to people around you.  
+      Please smile again soon, okay? 🤍
     </p>
     <button class="btn" onclick="nextPage()">Lanjut ➡️</button>
   </div>
 
-  <!-- Emoji Jatuh -->
+  <!-- Emoji jatuh -->
   <div class="emoji" style="left: 5%;">💐</div>
   <div class="emoji" style="left: 15%; animation-delay: 1s;">🌷</div>
   <div class="emoji" style="left: 25%; animation-delay: 2s;">🦋</div>
@@ -102,9 +96,9 @@
 
   <script>
     function nextPage() {
-      document.body.classList.add("fade-out");
+      document.body.style.opacity = 0;
       setTimeout(() => {
-        window.location.href = "halaman-ketiga.html"; // bisa kamu ubah ke happy/sad
+        window.location.href = "halaman-kelima.html";
       }, 800);
     }
   </script>
