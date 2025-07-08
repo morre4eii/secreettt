@@ -7,99 +7,98 @@
     body {
       margin: 0;
       padding: 0;
-      height: 100vh;
       background: linear-gradient(to bottom right, #fde2e4, #f9c5d1);
+      height: 100vh;
+      overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
-      text-align: center;
       font-family: 'Georgia', serif;
       color: #a8325e;
-      position: relative;
-      animation: fadeIn 1s ease forwards;
-      opacity: 1;
       transition: opacity 0.8s ease;
     }
 
-    body.fade-out {
-      opacity: 0;
-    }
-
-    .box {
+    .container {
+      text-align: center;
       background: #fff0f4;
-      padding: 40px;
+      padding: 30px;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
       max-width: 500px;
+      z-index: 2;
+      position: relative;
     }
 
     h1 {
-      font-size: 2em;
-      margin-bottom: 20px;
+      font-size: 1.8em;
+      margin-bottom: 10px;
     }
 
     p {
       font-size: 1.1em;
+      margin-bottom: 20px;
       line-height: 1.6;
     }
 
     .btn {
-      margin-top: 20px;
-      padding: 10px 20px;
+      padding: 10px 25px;
       font-size: 1em;
       border: none;
-      border-radius: 25px;
-      cursor: pointer;
+      border-radius: 20px;
       background-color: #d4f5d4;
       color: #28a745;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      cursor: pointer;
       transition: transform 0.3s ease;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     }
 
     .btn:hover {
       transform: scale(1.05);
     }
 
-    .emoji-kiri-atas {
+    .emoji {
       position: absolute;
-      top: 10px;
-      left: 10px;
-      font-size: 2em;
+      top: -50px;
+      font-size: 1.5em;
+      animation: jatuh 6s linear infinite;
+      opacity: 0.8;
     }
 
-    .emoji-kanan-bawah {
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-      font-size: 2em;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    @keyframes jatuh {
+      0% { transform: translateY(0); opacity: 0.9; }
+      100% { transform: translateY(110vh); opacity: 0; }
     }
   </style>
 </head>
 <body>
-  <div class="emoji-kiri-atas">💐✨🌷☘️🌱</div>
-  <div class="box">
-    <h1>😊 hey! are you happy today?!</h1>
+
+  <div class="container">
+    <h1>😊 Hey! You're happy today?</h1>
     <p>
-      What happened to you that you are so happy?<br><br>
-      Surely it is something that makes you smile?<br>
-      If true, that’s very good!<br>
-      Keep being happy!!🌈  
-      <br><br>Teruslah bersinar ya! ✨
+      What happened to you that you are so happy? 🤔🤔  
+      Surely it is something that makes you happy?  
+      If true, that is very good! Keep being happy!!! 😍😍
     </p>
-    <button class="btn" onclick="goTo('halaman-kelima.html')">Lanjut ➡️</button>
+    <button class="btn" onclick="nextPage()">Lanjut ➡️</button>
   </div>
-  <div class="emoji-kanan-bawah">🌺🍄🐣🐬🦋🍡🍰</div>
+
+  <!-- Emoji jatuh -->
+  <div class="emoji" style="left: 5%;">💐</div>
+  <div class="emoji" style="left: 15%; animation-delay: 1s;">🌷</div>
+  <div class="emoji" style="left: 25%; animation-delay: 2s;">🦋</div>
+  <div class="emoji" style="left: 35%; animation-delay: 1.5s;">🍰</div>
+  <div class="emoji" style="left: 45%; animation-delay: 0.5s;">🍡</div>
+  <div class="emoji" style="left: 55%; animation-delay: 2.5s;">🐬</div>
+  <div class="emoji" style="left: 65%; animation-delay: 1.2s;">☘️</div>
+  <div class="emoji" style="left: 75%; animation-delay: 1.8s;">🐣</div>
+  <div class="emoji" style="left: 85%; animation-delay: 2.2s;">🍄</div>
+  <div class="emoji" style="left: 95%; animation-delay: 0.8s;">✨</div>
 
   <script>
-    function goTo(url) {
-      document.body.classList.add("fade-out");
+    function nextPage() {
+      document.body.style.opacity = 0;
       setTimeout(() => {
-        window.location.href = url;
+        window.location.href = "halaman-kelima.html";
       }, 800);
     }
   </script>
