@@ -1,0 +1,26 @@
+<!-- Halaman index.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Secret</title>
+  <style>
+    /* style sama seperti sebelumnya */
+  </style>
+</head>
+<body>
+  <div class="emoji-kiri-atas">💐✨🌷☘️🌱</div>
+  <div class="box">
+    <h1>Haiii yang disana!!</h1>
+    <p>Pencettt ituuu 💗</p>
+    <button class="btn" onclick="goTo('surat.html')">Baca Surat 💌</button>
+  </div>
+  <div class="emoji-kanan-bawah">🌺🍄🐣🐬🦋🍡🍰</div>
+  <script>
+    function goTo(url) {
+      document.body.classList.add("fade-out");
+      setTimeout(() => { window.location.href = url; }, 800);
+    }
+  </script>
+</body>
+</html>
