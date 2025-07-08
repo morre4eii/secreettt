@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>You Deserve This Joy</title>
   <style>
     body {
@@ -15,18 +16,18 @@
       align-items: center;
       font-family: 'Georgia', serif;
       color: #a8325e;
-      transition: opacity 0.8s ease;
+      text-align: center;
+      position: relative;
     }
 
-    .container {
-      text-align: center;
+    .box {
       background: #fff0f4;
       padding: 30px;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      max-width: 500px;
+      max-width: 90%;
       z-index: 2;
-      position: relative;
+      animation: fadeIn 1s ease;
     }
 
     h1 {
@@ -35,16 +36,16 @@
     }
 
     p {
-      font-size: 1.1em;
-      margin-bottom: 20px;
+      font-size: 1.05em;
       line-height: 1.6;
+      margin-bottom: 20px;
     }
 
     .btn {
       padding: 10px 25px;
       font-size: 1em;
       border: none;
-      border-radius: 20px;
+      border-radius: 25px;
       background-color: #d4f5d4;
       color: #28a745;
       cursor: pointer;
@@ -54,6 +55,12 @@
 
     .btn:hover {
       transform: scale(1.05);
+      background-color: #baf0ba;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .emoji {
@@ -65,24 +72,25 @@
     }
 
     @keyframes jatuh {
-      0% { transform: translateY(0); opacity: 0.9; }
+      0% { transform: translateY(0); opacity: 1; }
       100% { transform: translateY(110vh); opacity: 0; }
     }
   </style>
 </head>
 <body>
-
-  <div class="container">
-    <h1>😊 Hey! You're happy today?</h1>
+  <div class="box">
+    <h1>😊 HEEIII!! You are Happy Today?!</h1>
     <p>
-      What happened to you that you are so happy? 🤔🤔  
-      Surely it is something that makes you happy?  
-      If true, that is very good! Keep being happy!!! 😍😍
+      That’s wonderful! 🤩  
+      Happiness looks great on you!  
+      Keep spreading that beautiful joy.  
+      Dunia ini butuh senyumanmu! 🌈✨
+      <br> what happened to you that you are so happy? surely it is something that makes you happy? if true that is very good! keep being happy!!💟
     </p>
-    <button class="btn" onclick="nextPage()">Lanjut ➡️</button>
+    <button class="btn" onclick="lanjut()">Lanjut ➡️</button>
   </div>
 
-  <!-- Emoji jatuh -->
+  <!-- Emoji Jatuh -->
   <div class="emoji" style="left: 5%;">💐</div>
   <div class="emoji" style="left: 15%; animation-delay: 1s;">🌷</div>
   <div class="emoji" style="left: 25%; animation-delay: 2s;">🦋</div>
@@ -95,7 +103,7 @@
   <div class="emoji" style="left: 95%; animation-delay: 0.8s;">✨</div>
 
   <script>
-    function nextPage() {
+    function lanjut() {
       document.body.style.opacity = 0;
       setTimeout(() => {
         window.location.href = "halaman-kelima.html";
