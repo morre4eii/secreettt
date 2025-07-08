@@ -1,64 +1,68 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Secret</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: linear-gradient(to bottom right, #fde2e4, #f9c5d1);
       height: 100vh;
-      overflow: hidden;
+      background: linear-gradient(to bottom right, #fde2e4, #f9c5d1);
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       font-family: 'Georgia', serif;
       color: #a8325e;
-      transition: opacity 0.8s ease;
-    }
-
-    body.fade-out {
-      opacity: 0;
-    }
-
-    .container {
+      overflow: hidden;
       text-align: center;
-      background: #fff0f4;
-      padding: 20px 30px;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      z-index: 2;
       position: relative;
     }
 
-    h1 {
-      font-size: 1.8em;
-      margin-bottom: 10px;
+    h2, p, .btn {
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: fadeIn 1s forwards;
+    }
+
+    h2 {
+      font-size: 2em;
+      animation-delay: 0.3s;
     }
 
     p {
       font-size: 1.1em;
-      margin-bottom: 20px;
+      margin: 10px 20px;
+      animation-delay: 0.6s;
     }
 
     .btn {
-      padding: 10px 25px;
-      font-size: 1em;
+      padding: 12px 30px;
+      background-color: #fff;
+      color: #d6336c;
       border: none;
-      border-radius: 20px;
-      background-color: #ffd6d6;
-      color: #a8325e;
+      border-radius: 25px;
+      font-size: 1em;
       cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      animation-delay: 0.9s;
       transition: transform 0.3s ease;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     }
 
     .btn:hover {
       transform: scale(1.05);
+      background-color: #ffe6ec;
     }
 
-    /* Emoji jatuh */
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     .emoji {
       position: absolute;
       top: -50px;
@@ -68,18 +72,15 @@
     }
 
     @keyframes jatuh {
-      0% { transform: translateY(0); opacity: 0.9; }
+      0% { transform: translateY(0); opacity: 1; }
       100% { transform: translateY(110vh); opacity: 0; }
     }
   </style>
 </head>
 <body>
-
-  <div class="container">
-    <h1>Haiii yang disana!!</h1>
-    <p>Pencettt ituuu 💗</p>
-    <button class="btn" onclick="nextPage()">Baca Surat 💌</button>
-  </div>
+  <h2>Haiii yang disana!!</h2>
+  <p>Pencettt ituuu 💌</p>
+  <button class="btn" onclick="lanjut()">Baca Surat</button>
 
   <!-- Emoji Jatuh -->
   <div class="emoji" style="left: 5%;">💐</div>
@@ -94,12 +95,12 @@
   <div class="emoji" style="left: 95%; animation-delay: 0.8s;">✨</div>
 
   <script>
-    function nextPage() {
-      document.body.classList.add("fade-out");
+    function lanjut() {
+      document.body.style.opacity = 0;
       setTimeout(() => {
         window.location.href = "surat.html";
       }, 800);
     }
   </script>
 </body>
-    </html>
+</html>
