@@ -18,10 +18,6 @@
       transition: opacity 0.8s ease;
     }
 
-    body.fade-out {
-      opacity: 0;
-    }
-
     .container {
       text-align: center;
       background: #fff0f4;
@@ -44,13 +40,17 @@
       line-height: 1.6;
     }
 
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
     .btn {
       padding: 10px 25px;
       font-size: 1em;
       border: none;
       border-radius: 20px;
-      background-color: #ffd6d6;
-      color: #a8325e;
       cursor: pointer;
       transition: transform 0.3s ease;
       box-shadow: 0 5px 10px rgba(0,0,0,0.1);
@@ -58,6 +58,16 @@
 
     .btn:hover {
       transform: scale(1.05);
+    }
+
+    .btn-sad {
+      background-color: #ffd6d6;
+      color: #d6336c;
+    }
+
+    .btn-happy {
+      background-color: #d4f5d4;
+      color: #28a745;
     }
 
     .emoji {
@@ -77,15 +87,12 @@
 <body>
 
   <div class="container">
-    <h1>Untuk Kamu 💌</h1>
-    <p>
-      Hai kamu yang manis,<br><br>
-      Terima kasih sudah membuka surat ini.  
-      Semoga harimu sehangat senyummu dan seindah hatimu.  
-      Jangan lupa jaga diri, tetap semangat, dan jangan menyerah ya!<br><br>
-      Dari seseorang yang diam-diam peduli... 🌸
-    </p>
-    <button class="btn" onclick="nextPage()">Lanjut ➡️</button>
+    <h1>For You 💌</h1>
+    <p>Hey, how do you feel now???</p>
+    <div class="btn-group">
+      <button class="btn btn-sad" onclick="goTo('sad.html')">😢 Sad</button>
+      <button class="btn btn-happy" onclick="goTo('happy.html')">😊 Happy</button>
+    </div>
   </div>
 
   <!-- Emoji Jatuh -->
@@ -101,10 +108,10 @@
   <div class="emoji" style="left: 95%; animation-delay: 0.8s;">✨</div>
 
   <script>
-    function nextPage() {
-      document.body.classList.add("fade-out");
+    function goTo(url) {
+      document.body.style.opacity = 0;
       setTimeout(() => {
-        window.location.href = "halaman-ketiga.html"; // bisa kamu ubah ke happy/sad
+        window.location.href = url;
       }, 800);
     }
   </script>
