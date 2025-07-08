@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Surat untuk Kamu</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(to bottom right, #fde2e4, #f9c5d1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: 'Georgia', serif;
+      color: #a8325e;
+      position: relative;
+    }
+
+    .surat-box {
+      background: #fff0f4;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      max-width: 500px;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .emoji-kiri-atas {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 2em;
+    }
+
+    .emoji-kanan-bawah {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      font-size: 2em;
+    }
+  </style>
+</head>
+<body>
+  <div class="emoji-kiri-atas">🌷</div>
+
+  <div class="surat-box">
+    <h1>Untuk Kamu 💌</h1>
+    <p>
+      Hai kamu yang manis,<br><br>
+      Terima kasih sudah membuka surat ini. Semoga harimu sehangat senyummu dan seindah hatimu.  
+      Jangan lupa jaga diri, tetap semangat, dan jangan menyerah ya!<br><br>
+      Dari seseorang yang diam-diam peduli... 🌸
+    </p>
+  </div>
+
+  <div class="emoji-kanan-bawah">🌺</div>
+</body>
+</html>
